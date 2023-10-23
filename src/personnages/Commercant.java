@@ -1,4 +1,4 @@
-package histoire;
+package personnages;
 
 public class Commercant extends Humain{
 	public Commercant(String name, int money) {
