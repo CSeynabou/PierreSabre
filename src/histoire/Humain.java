@@ -3,7 +3,7 @@ package histoire;
 public class Humain {
 	private String name;
 	private String favDrink;
-	private int money;
+	protected int money;
 
 	public Humain(String name, String favDrink, int money) {
 		this.name = name;
@@ -18,8 +18,12 @@ public class Humain {
 	public int getMoney() {
 		return money;
 	}
-	
-	private void parler(String texte) {
+		
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	protected void parler(String texte) {
 		System.out.println(this.getName() + ": " + texte);
 	}
 	
@@ -41,11 +45,11 @@ public class Humain {
 	
 	public void gagnerArgent(int gain) {
 		this.money += gain;
-		System.out.println("Lezgongue j'ai gagné " + gain + " sous.");
+		this.parler("Lezgongue j'ai gagné " + gain + " sous.");
 	}
 	
 	public void perdreArgent(int perte) {
 		this.money -= perte;
-		System.out.println("Oh noooon j'ai perdu " + perte + " sous.");
+		this.parler("Oh noooon j'ai perdu " + perte + " sous.");
 	}
 }
