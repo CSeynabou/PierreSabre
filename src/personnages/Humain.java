@@ -21,7 +21,7 @@ public class Humain {
 	}
 
 	public int getMoney() {
-		return money;
+		return this.money;
 	}
 
 	protected void parler(String texte) {
