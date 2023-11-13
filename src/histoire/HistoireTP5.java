@@ -4,6 +4,7 @@ import personnages.Commercant;
 import personnages.Ronin;
 import personnages.Yakuza;
 import personnages.Samourai;
+import personnages.Traitre;
 
 public class HistoireTP5 {
 
@@ -14,6 +15,7 @@ public class HistoireTP5 {
 		Yakuza yaku = new Yakuza("Yaku Le Noir", "whiskey", 30, "Warsong");
 		Ronin roro = new Ronin("Roro", "shochu", 60);
 		Samourai akimoto = new Samourai("Akimoto", "saké", 80, "Miyamoto");
+		Traitre masoko = new Traitre("Masako", "whiskey", 100, "Miyamoto");
 		
 		roro.faireConnaissanceAvec(marco);
 		yaku.faireConnaissanceAvec(marco);
@@ -25,6 +27,16 @@ public class HistoireTP5 {
 		akimoto.faireConnaissanceAvec(marco);
 		akimoto.listerConnaissance();
 		akimoto.boire("thé");
+		
+		masoko.faireLeGentil();
+		masoko.ranconner(kumi);
+		masoko.ranconner(chonin);
+		masoko.ranconner(marco);
+		akimoto.faireConnaissanceAvec(masoko);
+		masoko.ranconner(chonin);
+		masoko.faireConnaissanceAvec(yaku);
+		masoko.faireLeGentil();
+		masoko.faireConnaissanceAvec(roro);
 		
 	}
 
